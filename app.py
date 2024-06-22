@@ -1,31 +1,15 @@
 from modelos.restaurante import Restaurante
+from modelos.cardapio.bebida import Bebida
+from modelos.cardapio.prato import Prato
 
 restaurante_padoca = Restaurante('Padoca', 'Padaria')
-restaurante_mexicano = Restaurante('Mexican food', 'Mexicano')
-restaurante_pizza = Restaurante('Pizzaria Italy', 'Pizzaria')
-restaurante_hamburguer = Restaurante('Hamburgueria El', 'Hamburgueria')
-
-restaurante_padoca.receber_avaliacao('Guilherme', 10)
-restaurante_padoca.receber_avaliacao('Lais', 8)
-restaurante_padoca.receber_avaliacao('Jorge', 7.5)
-
-restaurante_mexicano.receber_avaliacao('Silvia', 9)
-restaurante_mexicano.receber_avaliacao('Gabriel', 2)
-restaurante_mexicano.receber_avaliacao('Jeremias', 5)
-
-restaurante_pizza.receber_avaliacao('Rodrigo', 10)
-restaurante_pizza.receber_avaliacao('Camila', 6)
-restaurante_pizza.receber_avaliacao('William', 8)
-
-restaurante_hamburguer.receber_avaliacao('Jaqueline', 4)
-restaurante_hamburguer.receber_avaliacao('Larissa', 7)
-restaurante_hamburguer.receber_avaliacao('Emmily', 10)
-
-restaurante_hamburguer.alternar_estado()
-restaurante_mexicano.alternar_estado()
+bebida_suco = Bebida('Suco de Melancia', 4.70, 'G')
+prato_pao = Prato('Pao doce', 5.30, 'O melhor pão doce da cidade')
+restaurante_padoca.adicionar_no_cardapio(bebida_suco)
+restaurante_padoca.adicionar_no_cardapio(prato_pao)
 
 def main():
-    Restaurante.listar_restaurantes()
+    restaurante_padoca.exibir_cardapio
 
 if __name__ == '__main__':
     main()
