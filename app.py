@@ -8,6 +8,9 @@ prato_pao = Prato('Pao doce', 5.30, 'O melhor pão doce da cidade')
 restaurante_padoca.adicionar_no_cardapio(bebida_suco)
 restaurante_padoca.adicionar_no_cardapio(prato_pao)
 
+bebida_suco.aplicar_desconto()
+prato_pao.aplicar_desconto()
+
 def main():
     restaurante_padoca.exibir_cardapio
 
